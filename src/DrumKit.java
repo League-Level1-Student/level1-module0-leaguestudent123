@@ -5,6 +5,7 @@
 
 
 import java.applet.AudioClip;
+import java.awt.Component;
 import java.awt.GridLayout;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
@@ -30,6 +31,7 @@ public class DrumKit implements MouseListener {
    	 // 1. Make a JFrame variable and initialize it using "new JFrame()"
    	 JFrame drums=new JFrame(); 
    	 // 2. Make the frame visible and 
+   	 drums.setVisible(true);
     //     set its default close operation to JFrame.EXIT_ON_CLOSE
    drums.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
    	 // 3. Set the size of the frame
@@ -37,22 +39,23 @@ public class DrumKit implements MouseListener {
    	 // 4. Set the title of the frame
    	 drums.setTitle("Drums Kit");
    	 // 5. Make a JPanel variable and initialize it using "new JPanel().
-	 JFrame kit=new JFrame();
+	 JPanel kit=new JPanel();
    	 // 6. Add the panel to the frame. (The panel is invisible.)
-	 kit.setVisible(true);
+	 drums.add(kit);
    	 // 7. Download an image of a drum from the Internet. Drop it into your Eclipse project under "default package".
-	 
+	 String pic="https://media.guitarcenter.com/is/image/MMGS7/SD350-Electronic-Drum-Kit-with-Mesh-Pads/J52903000000000-00-500x500.jpg";
+	
    	 // 8. Put the name of your image in a String variable.
-    
+	 drumLabelWithImage = createImage(pic);
    	 // 9. Edit the next line to use your String variable
 // drumLabelWithImage = createLabelImage(drumImageString);
    	 
    	 // 10. Add the image to the panel
-    
+   kit.add( drumLabelWithImage);
    	 // 11. Set the layout of the panel to "new GridLayout()"
-    
+  kit.setLayout(new GridLayout());
       	 // 12. call the pack() method on the frame.  Run your program. Do you see your drum image?
-   	  
+   	  drums.pack();
    	 // 13. add this mouse listener to drumLabelWithImage
     	
      	 // 18. Add more images to make a drumkit. Remember to add this mouse listener to each one.
@@ -77,7 +80,7 @@ public class DrumKit implements MouseListener {
  
     }
 
-    private JLabel createLabelImage(String fileName)
+    private JLabel createImage(String fileName)
 			throws MalformedURLException
 	{
 		URL imageURL = getClass().getResource(fileName);
