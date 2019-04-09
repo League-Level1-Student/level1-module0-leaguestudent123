@@ -1,46 +1,54 @@
- Call this method so that it prints “I like apples”. 
+
+ 
+ food("apples");
  
  
- 
- 
-void food(String fruit) {
+1.   void food(String fruit) {
        System.out.println("I like " + fruit);
 }
 
 
-2. Call this method to that it prints “Nerds rule”. 
+2.  
 
-void truth(int x) {
-       if(x > 5)
+truth(3);
+
+
+
+void truth(int 3) {
+       if(3 > 5)
              System.out.println("Geeks rule");
        else
               System.out.println("Nerds rule");
 
 }
 
+3.		drawLine();
 
-3.Use this method to draw a square. Don’t change the method.
 
 void drawLine() {
+     
+      for (int i = 0; i < 4; i++) {
+		
       robot.move(100);
        robot.turn(90);
+       }
 }
-4. Call this method so that it only prints “The mouse jumped over the candlestick”.
+4.
+   jump(6);
 
 
-void jump(int height) {
-       if (height > 100)
-             System.out.println("The mouse jumped over the moon.");
-       if (height > 50)
-              System.out.println("The mouse jumped over the broom.");
-       if (height > 5)
+
+ void jump(int 6) {
+       
+       if (6 > 5)
               System.out.println("The mouse jumped over the candlestick.");
 }
-5. Finish this method so that it prints: “The mouse jumped over the piggy” when I call it like this: jump("piggy");
+5. 
 
-       void jump(__________________________________________________) {
 
-             System.out.println("The mouse jumped over the " + obstacle);
+		 void jump(String obstical) {
+       
+         System.out.println("The mouse jumped over the " + obstacle);
       }
 
 
@@ -51,3 +59,4 @@ void jump(int height) {
 
 
 
+       
